@@ -192,6 +192,7 @@ def win_prob_chart(igwp_data: pd.DataFrame, comebacks_df: pd.DataFrame, swings_d
                 fontsize=9,
                 arrowprops=dict(arrowstyle="->")
             )
+    # Prob swing marker (from previous code, adjusted x-coordinate)
     swing_data = swings_df[swings_df['game_id'] == current_game_id]
     if not swing_data.empty:
         swing_poss_num = swing_data['poss_num'].iloc[0]
@@ -208,7 +209,7 @@ def win_prob_chart(igwp_data: pd.DataFrame, comebacks_df: pd.DataFrame, swings_d
                 zorder=5
             )
             ax.annotate(
-                f"{comeback_data['team_name'].iloc[0]} Lowest WP: {y_annotate * 100:.1f}%, {int(comeback_data['favorite_score'].iloc[0])}-{int(comeback_data['underdog_score'].iloc[0])}",
+                f"{swing_data['team_name'].iloc[0]} Highest WP Swing: {swing_data['prob_swing'].iloc[0] * 100:.1f}%, {int(swing_data['favorite_score'].iloc[0])}-{int(swing_data['underdog_score'].iloc[0])}",
                 (x_annotate, y_annotate),
                 xytext=(10, 15), # Adjusted xytext for better visibility
                 textcoords="offset points",

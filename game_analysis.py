@@ -43,8 +43,6 @@ def comebacks(df: pd.DataFrame) -> pd.DataFrame:
 
     return comebacks_df
 
-import pandas as pd
-import numpy as np
 
 def swings(df: pd.DataFrame) -> pd.DataFrame:
     # Ensure the dataframe is sorted by gameId and possession number for correct consecutive differences
