@@ -209,7 +209,7 @@ def win_prob_chart(igwp_data: pd.DataFrame, comebacks_df: pd.DataFrame, swings_d
                 zorder=5
             )
             ax.annotate(
-                f"{swing_data['team_name'].iloc[0]} Highest WP Swing: {swing_data['prob_swing'].iloc[0] * 100:.1f}%, {int(swing_data['favorite_score'].iloc[0])}-{int(swing_data['underdog_score'].iloc[0])}",
+                f"{swing_data['team_name'].iloc[0]} Highest WP Swing: {swing_data['biggest_swing'].iloc[0] * 100:.1f}%, {int(swing_data['favorite_score'].iloc[0])}-{int(swing_data['underdog_score'].iloc[0])}",
                 (x_annotate, y_annotate),
                 xytext=(10, 15), # Adjusted xytext for better visibility
                 textcoords="offset points",

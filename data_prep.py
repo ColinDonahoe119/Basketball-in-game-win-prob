@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 import re
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
 def camel_to_snake(name):
     return re.sub(r'(?<!^)(?=[A-Z])', '_', name).lower()
@@ -118,8 +122,8 @@ def data_prep(possessions: pd.DataFrame, teams: pd.DataFrame, team_date_stats: p
     test = df[df['game_id'].isin(test_ids)]
 
     # Save processed data
-    train.to_csv("data/processed/train.csv", index=False)
-    test.to_csv("data/processed/test.csv", index=False)
+    train.to_csv(PROCESSED_DIR / "train.csv", index=False)
+    test.to_csv(PROCESSED_DIR / "test.csv", index=False)
 
     return train, test
 
