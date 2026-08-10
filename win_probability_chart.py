@@ -157,16 +157,7 @@ def win_prob_chart(igwp_data: pd.DataFrame, comebacks_df: pd.DataFrame, swings_d
         ax.annotate(f"Halftime: {int(halftime_winner_score)}-{int(halftime_loser_score)}", xy=(halftime_time_into_game, 1.0),
                     xycoords=('data', 'axes fraction'),xytext=(5, 5), textcoords='offset points', ha='center',va='bottom',fontsize=14,color='black'
 )
-    if has_ot:
-        end_reg = 40
-        end_reg_data = game[game['minutes_into_game'] <= end_reg].iloc[-1]
-        if not end_reg_data.empty:
-            ax.axvline(end_reg, color='gray', linestyle='--', linewidth=1, alpha=0.8)
-            end_reg_winner_score = end_reg_data['favorite_score'] if end_reg_data['result'] == 1 else end_reg_data['underdog_score']
-            end_reg_loser_score = end_reg_data['underdog_score'] if end_reg_data['result'] == 1 else end_reg_data['favorite_score']
-            ax.annotate(f"End of Regulation: {int(end_reg_winner_score)}-{int(end_reg_loser_score)}", xy=(end_reg, 1.0),
-                        xycoords=('data', 'axes fraction'),xytext=(5, 5), textcoords='offset points', ha='center',va='bottom',fontsize=14,color='black'
-)
+
     # Lowest WP marker (from previous code, adjusted x-coordinate)
     current_game_id = game['game_id'].iloc[0]
     comeback_data = comebacks_df[comebacks_df['game_id'] == current_game_id]
