@@ -56,28 +56,27 @@ This option reproduces the data preparation process from the original raw data. 
 > **Note:** If using processed data, skip the data preparation section and continue with evaluation sections.
 ## Project Structure
 
+```
 CBB_IGWP/
-│
 ├── docs/
-│   ├── in_game_win_probability.ipynb
-│   └── scripts/
-│       ├── data_prep.py
-│       ├── download_data.py
-│       ├── game_analysis.py
-│       ├── game_eval.py
-│       ├── model_eval.py
-│       ├── models.py
-│       ├── train_model.py
-│       └── win_probability_chart.py
-│
+│   └── in_game_win_probability.ipynb
+├── scripts/
+│   ├── data_prep.py
+│   ├── download_data.py
+│   ├── game_analysis.py
+│   ├── game_eval.py
+│   ├── model_eval.py
+│   ├── models.py
+│   ├── train_model.py
+│   └── win_probability_chart.py
 ├── data/
 │   ├── raw/
 │   └── processed/
-│
 ├── data_prep.ipynb
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ## Documentation
 
