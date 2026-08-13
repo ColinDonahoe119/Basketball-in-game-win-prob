@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ingame_winprob import compute_live_win_prob, compute_bracket_igwp, compute_log_prob
+from docs.scripts.models import compute_live_win_prob, compute_bracket_igwp, compute_log_prob
 
 # Function to evaluate a single game and compute win probabilities for each possession
 def game_eval(possessions_merged: pd.DataFrame, game_id: int) -> pd.DataFrame:
