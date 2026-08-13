@@ -33,44 +33,51 @@ pip install -r requirements.txt
 
 There are two ways to run the project, both are run from the in_game_win_prob.ipynb notebook.
 
-### Option 1: Download Processed Data
+## Running the Project
 
-This is the fastest option and allows you to skip data preparation.
+The project is designed to be run from the main notebook:
 
-Run:
+`docs/in_game_win_probability.ipynb`
 
-download_processed()
+After installing the required packages, open the notebook and follow the workflow in order.
 
-Then run the following workflow:
+### Data Options
 
-1. Train the model
-2. Evaluate the model
-3. Generate analysis and visualizations
+At the beginning of the notebook, choose one of the following options:
 
-[Specific notebook instructions]
+**Option 1: Download Processed Data**
 
-### Option 2: Start From Raw Data
+This is the fastest option and skips the data preparation step. Run the `download_processed()` function when prompted, then continue through the notebook workflow.
 
-To reproduce the data preparation process:
+**Option 2: Start From Raw Data**
 
-1. Run `download_raw()`
-2. Run `data_prep`
-3. Run `train_model`
-4. Run `game_eval`
-5. Run `model_eval`
-6. Run `game_analysis`
+This option reproduces the data preparation process from the original raw data. Run `download_raw()` when prompted, then continue through the notebook workflow.
 
-## Running in Google Colab
-
-[Your specific Colab instructions]
-
+> **Note:** If using processed data, skip the data preparation section and continue with evaluation sections.
 ## Project Structure
 
 CBB_IGWP/
-├── src/
-├── notebooks/
+│
 ├── docs/
-...
+│   ├── in_game_win_probability.ipynb
+│   └── scripts/
+│       ├── data_prep.py
+│       ├── download_data.py
+│       ├── game_analysis.py
+│       ├── game_eval.py
+│       ├── model_eval.py
+│       ├── models.py
+│       ├── train_model.py
+│       └── win_probability_chart.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── data_prep.ipynb
+├── requirements.txt
+├── README.md
+└── .gitignore
 
 ## Documentation
 
