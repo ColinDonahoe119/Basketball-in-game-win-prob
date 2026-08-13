@@ -7,9 +7,9 @@ college basketball.
 
 ### 1. Clone the repository
 
-git clone https://github.com/ColinDonahoe119/Basketball-in-game-win-prob/tree/main
+git clone https://github.com/ColinDonahoe119/Basketball-in-game-win-prob
 
-cd CBB_IGWP
+cd Basketball-in-game-win-prob
 
 ### 2. Create a virtual environment
 
