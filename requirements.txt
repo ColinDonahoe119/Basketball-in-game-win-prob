@@ -1,4 +1,5 @@
 ﻿gdown==6.1.0
+ipykernel==7.3.0
 matplotlib==3.11.1
 notebook==7.4.7 
 numpy==2.5.1
