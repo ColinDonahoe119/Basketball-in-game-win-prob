@@ -37,7 +37,7 @@ There are two ways to run the project, both are run from the in_game_win_prob.ip
 
 The project is designed to be run from the main notebook:
 
-`docs/in_game_win_probability.ipynb`
+jupyter notebook scripts/in_game_win_probability.ipynb
 
 After installing the required packages, open the notebook and follow the workflow in order.
 
@@ -59,20 +59,21 @@ This option reproduces the data preparation process from the original raw data. 
 ```
 CBB_IGWP/
 ├── docs/
-│   └── in_game_win_probability.ipynb
+│   └── CBB_IGWP.docx
 ├── scripts/
-│   ├── data_prep.py
-│   ├── download_data.py
-│   ├── game_analysis.py
-│   ├── game_eval.py
-│   ├── model_eval.py
-│   ├── models.py
-│   ├── train_model.py
-│   └── win_probability_chart.py
+│   ├── in_game_win_probability.ipynb
+│   └── utils/
+│       ├── data_prep.py
+│       ├── download_data.py
+│       ├── game_analysis.py
+│       ├── game_eval.py
+│       ├── model_eval.py
+│       ├── models.py
+│       ├── train_model.py
+│       └── win_probability_chart.py
 ├── data/
 │   ├── raw/
 │   └── processed/
-├── data_prep.ipynb
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -83,4 +84,4 @@ CBB_IGWP/
 For the full methodology, data description, model formulation,
 evaluation methodology, and results, see:
 
-`docs/CBB_IGWP_Documentation.docx`
+`docs/CBB_IGWP.docx`
